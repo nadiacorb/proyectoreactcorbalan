@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import './navbar'; 
+import PropTypes from 'prop-types';
+import './Navbar'; 
 const Navbar = (menus, children) => {
 	return(
 		<div>
@@ -25,4 +25,4 @@ Navbar.proptype ={
 	children: PropTypes.element
 }
 
-export default Navbar
+export default Navbar;

@@ -8,7 +8,7 @@ const Layout = ({children}) => {
 }
 
 Layout.proptype = {
-	children: Proptypes.element.isRequired
+	children: Proptypes .element.isRequired
 }
 
 export default Layout;

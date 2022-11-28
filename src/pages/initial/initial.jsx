@@ -1,6 +1,6 @@
-import Layout from '../../components/layout'
-import Navbar from  '../../components/navbar'
-import Lista from '../../components/list'
+import Layout from '../../components/layout';
+import Navbar from  '../../components/navbar';
+import Lista from '../../components/list';
 
 const Initial = () => {
 	const Menus = ['Inicio','Productos', 'Promociones', 'Envios', 'Contacto']
