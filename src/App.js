@@ -8,7 +8,7 @@ const App = () => {
 
   return(
     <ItemListContainer>
-    </NavBar>
+    <NavBar></NavBar>
     <List lista={Productos}/>
     </ItemListContainer>
     )

@@ -1,9 +1,11 @@
 import React from 'react';
+import Image from './Cartwidget.png';
+import StyleCart from './styles/Cartwidget.scss';
 
 const Cartwidget = () => {
 	return (
 		<div>
-		    <img src="components/Cartwidget/Cartwidget.png" alt=""/>
+		    <img src={Image}/>
        <span>2</span>
 		</div>
 )
