@@ -1,26 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Initial from './pages/initial/Initial';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from  './components/NavBar/NavBar';
+import List from './components/List/List';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+  const Productos = ['Hierros', 'Caños', 'Chapas', 'Perfiles', 'Mallas', 'Metal desplegado']
+
+  return(
+    <ItemListContainer>
+    <NavBar><button>Carrito de compras</button></NavBar>
+    <List lista={Productos}/>
+    </ItemListContainer>
+    )
 }
 
 export default App;

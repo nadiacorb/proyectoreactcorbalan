@@ -1,28 +1,26 @@
-import PropTypes from 'prop-types';
-import './Navbar'; 
-const Navbar = (menus, children) => {
-	return(
-		<div>
-		<div>
-		{
-			menus.map((menu)=> {
-				return 
-				<p>Distribuidora de hierross<p/>
-				<a href='#'>{menu}</a>
-				<div>{Cardwidget}</div>
+import React from 'react';
+import Cartwidget from '../Cartwidget/Cartwidget';
 
-			})
-			}
-		</div>
-		<div>
-		{children}
-		</div>
-		)
-}
 
-Navbar.proptype ={
-	menus: PropTypes.array.isRequired, I
-	children: PropTypes.element
-}
+const NavBar = () => {
+	return (
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Envios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <Cartwidget/>
+    </div>
+    );
+};
+    
 
-export default Navbar;
+
+export default NavBar;
+    
