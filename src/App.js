@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Initial from './Initial';
+import Initial from './pages/initial/Initial';
 
 function App() {
   return (
