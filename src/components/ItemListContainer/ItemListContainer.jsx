@@ -1,11 +1,12 @@
 import React from 'react';
+import Style from './styles/ItemListContainer.scss';
 
-const ItemListContainer = ({children}) => {
+const ItemListContainer = (prop) => {
 	return(
-        <div>{children}</div>
+        <div className='greeting'>{prop.name}, Bienvenida a nuestra tienda</div>
 		)
 
-}
+};
 
 
 export default ItemListContainer;

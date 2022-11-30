@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from './Cartwidget.png';
-import StyleCart from './styles/Cartwidget.scss';
+import Style from './styles/Cartwidget.scss'
 
 const Cartwidget = () => {
 	return (
