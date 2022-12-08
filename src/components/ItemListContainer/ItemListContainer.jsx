@@ -1,12 +1,21 @@
 import React from 'react';
 import Style from './styles/ItemListContainer.scss';
+import {Productos} from '../mock/Mock.jsx';
 
-const ItemListContainer = (prop) => {
+
+const ItemListContainer = () => {
 	return(
-        <div className='greeting'>{prop.name}, Bienvenida a nuestra tienda</div>
-		)
-
-};
-
+        <div>
+            {
+            Productos.map((Productos=>{
+                    return(
+                    <div>
+                        <img src={Productos.img} width={100} height={100}/>
+                        <p>{Productos.name}</p>
+                    </div>
+                    )
+            }))
+}
+</div>
 
 export default ItemListContainer;

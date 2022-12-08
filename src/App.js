@@ -1,17 +1,20 @@
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import NavBar from  './components/NavBar/NavBar';
-import List from './components/List/List';
+import NavBar from  './components/navbar/NavBar';
 import Styles from './App.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {categorias,menus} from './components/mock/Mock';
 
 const App = () => {
-  const Productos = ['Hierros', 'Caños', 'Chapas', 'Perfiles', 'Mallas', 'Metal desplegado']
-
   return(
       <div>
       <h1>Distribuidora de hierros</h1>
-      <NavBar/>
-      <ItemListContainer name='Nadia'/>
-    <List lista={Productos}/>
+      <BrowserRouter>
+        <NavBar menus={menus} categorias={ItemListContainer}/>
+          <Routes>
+            <Route exact path="/" element={<Inicio />} />
+            <Route exact path="/category/:id" element={<ItemListContainer/>} />
+          </Routes>
+      </BrowserRouter>
       </div>
    
     )
