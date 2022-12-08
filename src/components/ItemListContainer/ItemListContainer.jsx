@@ -5,17 +5,18 @@ import {Productos} from '../mock/Mock.jsx';
 
 const ItemListContainer = () => {
 	return(
-        <div>
+        <div className="productos__img">
             {
-            Productos.map((Productos=>{
+            Productos.map((producto=>{
                     return(
                     <div>
-                        <img src={Productos.img} width={100} height={100}/>
-                        <p>{Productos.name}</p>
+                        <img src={producto.img} width={300} height={300}/>
+                        <p>{producto.name}</p>
                     </div>
                     )
             }))
 }
 </div>
+)}
 
 export default ItemListContainer;
