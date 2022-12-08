@@ -36,41 +36,49 @@ export const categorias = [{
 
 export const Productos = [
 {
+    id:10,
 	name:'Angulo 12 MT',
 	category: 1,
 	img: 'https://www.depositosancarlos.co/wp-content/uploads/2020/11/28AN400-12-ANGULO-14-X-2-12-6-MT-3704-KG-500x500.jpg'
 },
 {
+    id:11,
 	name:'Hierro cuadrado',
 	category: 1,
 	img: 'https://www.plastigas.com.ar/media/catalog/product/cache/5be8613c49569c873a50ed7e321cb477/h/e/hercua_330.1850.011_.jpg',
 },
 {
+    id:12,
 	name:'Hierro Redondo',
 	category: 1,
 	img: 'https://www.ferroscarp.com.ar/wp-content/uploads/2020/06/Hierro-redondo.jpg'
 },
 {
+    id:13,
 	name:'Caño cuadrado',
 	category: 2,
 	img: 'https://www.hierrosmaldonado.com.ar/229-large_default/ca%C3%B1o-cuadrado-30x30x16.jpg'
 },
 {
+    id:14,
 	name:'Caño circular',
 	category: 2,
 	img: 'https://http2.mlstatic.com/D_NQ_NP_809228-MLA41714029851_052020-O.webp'
 },
 {
+    id:15,
 	name:'Chapa gruesa',
 	category: 3,
 	img: 'https://http2.mlstatic.com/D_NQ_NP_996390-MLA31112474854_062019-O.webp'
 },
 {
+    id:16,
 	name:'Chapa galvanizada',
 	category: 3,
 	img: 'https://http2.mlstatic.com/D_NQ_NP_794115-MLA40731786336_022020-O.webp'
 },
 {
+    id:17,
 	name: 'Perfil Heb',
 	category: 4,
 	img: 'https://mechanicsoil.com/wp-content/uploads/2019/03/perfil-heb.jpg'
@@ -81,11 +89,13 @@ export const Productos = [
 	img: 'https://chapaferro.com.ar/wp-content/uploads/2021/07/malla-sima.jpg'
 },
 {
+    id:18,
 	name:'Metal desplegado 620-30-30',
 	category: 6,
 	img: 'http://globalaceros.mx/wp-content/uploads/2018/01/metal_desplegado.jpg'
 },
 {
+    id:19,
 	name:'Metal desplegado 270-16-20',
 	category: 6,
 	img: 'https://acerco.com.ar/wp-content/uploads/2020/12/acerco-metaldesplegadopesado-300x300.jpg'

@@ -1,7 +1,6 @@
 import React from 'react';
-import Style from './styles/ItemDetailContainer.scss';
 
-const Productos = ({img, name, price, detalle}) => {
+const ItemDetailContainer = ({img, name, price, detalle}) => {
 	return(
         <div>
 	        <img src= {img} />
@@ -14,4 +13,4 @@ const Productos = ({img, name, price, detalle}) => {
 };
 
 
-export default ItemLDetailContainer;
+export default ItemDetailContainer;
