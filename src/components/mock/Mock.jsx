@@ -84,18 +84,19 @@ export const Productos = [
 	img: 'https://mechanicsoil.com/wp-content/uploads/2019/03/perfil-heb.jpg'
 },
 {
+    id:18,
 	name:'Malla soldada negra',
 	category: 5,
 	img: 'https://chapaferro.com.ar/wp-content/uploads/2021/07/malla-sima.jpg'
 },
 {
-    id:18,
+    id:19,
 	name:'Metal desplegado 620-30-30',
 	category: 6,
 	img: 'http://globalaceros.mx/wp-content/uploads/2018/01/metal_desplegado.jpg'
 },
 {
-    id:19,
+    id:20,
 	name:'Metal desplegado 270-16-20',
 	category: 6,
 	img: 'https://acerco.com.ar/wp-content/uploads/2020/12/acerco-metaldesplegadopesado-300x300.jpg'

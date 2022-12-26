@@ -8,11 +8,11 @@ import { useEffect } from 'react';
 
 
 const ItemListContainer=()=>{
-    const [item, setItem] = useState(Productos);
-    const {id} = useParams()
+    const [item,setItem] = useState(Productos);
+    const { id } = useParams()
     
     const FilterCategory = new Promise((resolve,eject)=>{
-        const newProductos = Productos.filter((p)=> p.category == id)
+        const newProductos = Productos.filter((p)=>p.category == id)
         resolve(newProductos)
     })
     
@@ -20,17 +20,9 @@ const ItemListContainer=()=>{
         FilterCategory.then((response)=>{
         setItem(response)
         })
-    }, [id])
+    },[id])
 
- 	return(
-        <div className='productos__img'>
-            {
-            item.map((producto)=>{
-                    return
-                    <Item producto={producto}/>
-            })
+
 }
-</div>
-)}
 
 export default ItemListContainer;
