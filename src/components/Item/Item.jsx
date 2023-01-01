@@ -1,19 +1,13 @@
 import Style from './styles/Item.scss';
 import { Link } from "react-router-dom";
-import {Productos,categorias} from '../mock/Mock.jsx';
 
 const Item =({producto})=>{
 	return(
         <div className='productos__img'>
-            {
-            producto.map((producto)=>{
-                    return
-                    <Item producto={producto}/>
-            })
+            <img src={producto.img}/>
+           <Link to={`/item/${producto.id}`} ><p>{producto.name}</p></Link>
+           </div>
+           )
 }
-</div>
-    
-    
-)}
 
 export default Item;

@@ -14,7 +14,8 @@ import Style from './styles/NavBar.scss';
             } 
             {
             categorias.map((categoria)=>{
-                    return <Link to={`/category/${categoria.id}`} className='navbar__menu'> {categoria.name}</Link>
+                    return <Link to={`/category/${categoria.id}`} className='navbar__menu' data-replace={`${categoria.name}`}>
+              <span>{categoria.name}</span>></Link>
                   })
                 }
                 <Cartwidget/>
