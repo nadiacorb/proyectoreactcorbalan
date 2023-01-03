@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {Productos,categorias} from '../mock';
 
 const Item =({producto})=>{
-	return(
+	return{
         <div className='productos__img'>
             {
             producto.map((producto)=>{
@@ -14,6 +14,6 @@ const Item =({producto})=>{
 </div>
     
     
-)}
+}}
 
 export default ItemList;
