@@ -6,7 +6,7 @@ import {
 } from "firebase/firestore";
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import NavBar from  './components/navbar/NavBar';
+import Navbar from  './components/navbar/Navbar';
 import Styles from './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { menus } from './mock';
@@ -31,7 +31,7 @@ const App = () => {
   return(
       <div>
       <BrowserRouter>
-        <NavBar menus={menus} categorias={categorias}/>
+        <Navbar menus={menus} categorias={categorias}/>
           <Routes>
             <Route exact path='/' element={<ItemListContainer/>} />
             <Route exact path='/category/:id' element={<ItemListContainer/>} />
