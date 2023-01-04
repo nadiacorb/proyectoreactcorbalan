@@ -1,22 +1,7 @@
-import React from 'react';
-import { useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
-import ItemCount from '../ItemCount/ItemCount';
-
-const ItemDetail = ({producto})=>{
-const {addCount} = useContext(CartContext);
-
-const handlerAddCount = (count) => {
-    addCount(count,producto);
-};
-return(
-<div>
-    <h1>Detalle del producto {producto.name}</h1>
-    <img src={producto.img}/>
-    <ItemCount onChangeCount={(e)=>handlerAddCount(e)} />
-</div>
-);
-};
-
+const ItemDetail =()=>{
+    return(
+        <h1>detalle del producto</h1>
+    )
+}
 
 export default ItemDetail;

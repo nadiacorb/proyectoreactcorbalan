@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
-import Style from './styles/NavBar.scss';
+import Style from './styles/Navbar.scss';
 
-    const NavBar = ({menus, categorias}) =>{
+    const Navbar = ({menus, categorias}) =>{
     	return(
             <div>
         <nav>
@@ -14,8 +14,7 @@ import Style from './styles/NavBar.scss';
             } 
             {
             categorias.map((categoria)=>{
-                    return <Link to={`/category/${categoria.id}`} className='navbar__menu' data-replace={`${categoria.name}`}>
-              <span>{categoria.name}</span>></Link>
+                    return <Link to={`/category/${categoria.id}`} className='navbar__menu'> {categoria.name}</Link>
                   })
                 }
                 <Cartwidget/>
@@ -25,4 +24,4 @@ import Style from './styles/NavBar.scss';
     }
     
 
-export default NavBar;
+export default Navbar;
