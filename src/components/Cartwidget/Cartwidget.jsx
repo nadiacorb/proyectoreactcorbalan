@@ -1,13 +1,20 @@
 import React from 'react';
 import Image from './Cartwidget.png';
 import Style from './styles/Cartwidget.scss';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const Cartwidget = () => {
+    const {count} = useContext(CartContext)
+    
 	return (
-		<div>
+		<div className='style__card'>
 		    <img src={Image}/>
-       <span>2</span>
+       <p>{count}</p>
+       <Link to="/cart"> Terminar compra</Link>
 		</div>
+    
 )
 };
 
