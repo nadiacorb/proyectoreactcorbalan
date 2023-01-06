@@ -11,7 +11,7 @@ const handlerAddCount = (count) => {
 };
 return(
 <div>
-    <h1>Detalle del producto {producto.name}</h1>
+    <h1>Producto {producto.name}</h1>
     <img src={producto.img}/>
     <ItemCount onChangeCount={(e)=>handlerAddCount(e)} />
 </div>

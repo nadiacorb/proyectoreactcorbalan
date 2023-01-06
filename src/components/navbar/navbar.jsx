@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import React from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
-import Style from './styles/NavBar.scss';
+import Style from './styles/Navbar.scss';
 
     const Navbar = ({menus, categorias}) =>{
     	return(
