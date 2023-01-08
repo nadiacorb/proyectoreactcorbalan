@@ -12,7 +12,7 @@ const Cartwidget = () => {
 		<div className='style__card'>
 		    <img src={Image}/>
        <p>{count}</p>
-       <Link to="/cart"> Terminar compra</Link>
+       <Link to="/cart" className='style__card--button'> Terminar compra</Link>
 		</div>
     
 )
