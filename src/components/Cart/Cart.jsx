@@ -1,39 +1,19 @@
-import React from 'react';
 import { Productos } from "../../mock";
 import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 
 const Cart = () => {
-    const order = {
-        buyer: {
-          name: "nadia",
-          phone: "12345678",
-          email: "nadia.corbalan@live.com.ar",
-        },
-        items: [
-          {
-            name: "Chapa galvanizada",
-            price: 5000,
-          },
-        ],
-        total: 5000,
-      };
-    
+
   const sendOrder = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
     addDoc(ordersCollection,order).then(({id})=> alert(id))
   };
 
-  const updateOrder = () =>{
-    const db = getFirestore()
-    const orderDoc = doc(db,"orders","FuxjLyC5qKn01WgyEPWr");
-    updateDoc(orderDoc,{buyer:{email:"email",name:'ayelen',phone:"54321",},total:6000}).then(res => alert("actualizado"));
-  }
-
+  
   return (
     <div>
-      <h1>Finalizar compra</h1>
-      <div className="producto-comprador">
+      <h1>Terminar compra</h1>
+      <div className="producto-buyer">
         <div>
           <label>Nombre</label>
           <input type="text" />
@@ -49,18 +29,15 @@ const Cart = () => {
       </div>
       {Productos.map((producto) => {
         return (
-          <div className="productos-decarrito">
-            <img src={producto.img} width={50} height={50} />
+          <div className="product-compra">
+            <img src={producto.img} />
             <p>{producto.name}</p>
-            <p>{producto.price}</p>
+            <p>{producto.precio}</p>
           </div>
         );
       })}
       <div>
-        <button onClick={()=>sendOrder()}>Crear pedido</button>
-      </div>
-      <div>
-        <button onClick={()=>updateOrder()}>Actualizar pedido</button>
+        <button onClick={()=>sendOrder()}>Generar order</button>
       </div>
     </div>
   );

@@ -1,8 +1,24 @@
-img {
+.style__card img {
     width: 30px;
-    margin-left: 60px;
+    margin-left: 80px;
 }
 
-span {
+p {
     color: #E57949;
+    margin-left: 10px;
+    
+}
+
+.style__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.style__card--button {
+    background-color: #E57949;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin: 0px 15px;
 }

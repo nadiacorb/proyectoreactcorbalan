@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Button =({})=>{
     const [count,setCount] = useState(0)
@@ -8,7 +8,7 @@ const Button =({})=>{
 
     return(
         <div>
-            <h4>Agregar Producto</h4>
+            <h4>Agregar producto</h4>
             <button onClick={()=>handlerAdd}>+</button>
             <input value={count}/>
             <button onClick={()=>handlerRest}>-</button>
