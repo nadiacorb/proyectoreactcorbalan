@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import {collection, doc, getDoc, getDocs, getFirestore,} from "firebase/firestore";
 import Style from './styles/ItemListContainer.scss';
 import {Productos,categorias} from '../../mock';
 import Item from '../Item/Item';
@@ -8,24 +9,36 @@ import { useEffect } from 'react';
 
 
 const ItemListContainer=({})=>{
-    const [item, setItem] = useState(Productos);
+    const [item, setItem] = useState([]);
+    const [itemcopy, setItemCopy] = useState(item);
     const {id} = useParams()
     
-    const FilterCategory = new Promise((resolve,eject)=>{
-        if(id) {
-         const newProductos = Productos.filter((p)=>p.category == id)
-         resolve(newProductos)  
+    const FilterCategory = () => { 
+        if(id && itemcopy) {
+         const newProductos = itemcopy.filter((p) => p.category == id);
+      return newProductos;
         }
         else {
-            resolve(Productos)
+            return itemcopy;
         }
-    })
+    };
     
-    useEffect(()=>{
-        FilterCategory.then((response)=>{
-        setItem(response)
-        })
-    }, [id])
+   useEffect(() => {
+    const filtro = FilterCategory();
+    setItem(filtro);
+  }, [id]);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const itemCollection = collection(db, "item");
+
+    getDocs(itemCollection).then((result) => {
+      setItem(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+      setItemCopy(result.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+  }, []);
+
 
  	return(
         <div className='productos__img'>

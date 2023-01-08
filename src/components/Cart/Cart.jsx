@@ -1,23 +1,46 @@
-import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
-import { Link } from 'react-router-dom';
+import { Productos } from "../../mock";
+import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 
-const Cart = () =>{
-    const {listaProducto} = useContext(CartContext)
-    console.log(listaProducto[0])
-    return
-    (<div> {
-        listaProducto[0].map((lp)=>{
-           return( 
-           <div>
-                <p>{lp.name}</p>
-                <p>{lp.precio}</p>
-            </div>
-            )
-        })
-    }
-    </div>)
+const Cart = () => {
 
-}
+  const sendOrder = () => {
+    const db = getFirestore();
+    const ordersCollection = collection(db, "orders");
+    addDoc(ordersCollection,order).then(({id})=> alert(id))
+  };
+
+  
+  return (
+    <div>
+      <h1>Terminar compra</h1>
+      <div className="producto-buyer">
+        <div>
+          <label>Nombre</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>dirección</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Teléfono</label>
+          <input type="text" />
+        </div>
+      </div>
+      {Productos.map((producto) => {
+        return (
+          <div className="product-compra">
+            <img src={producto.img} />
+            <p>{producto.name}</p>
+            <p>{producto.precio}</p>
+          </div>
+        );
+      })}
+      <div>
+        <button onClick={()=>sendOrder()}>Generar order</button>
+      </div>
+    </div>
+  );
+};
 
 export default Cart;

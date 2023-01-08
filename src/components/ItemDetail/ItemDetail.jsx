@@ -4,17 +4,16 @@ import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
 const ItemDetail =({producto})=>{
-const {addCount} = useContext(CartContext)
+const {addCount} = useContext(CartContext);
 
 const handlerAddCount =(count)=>{
-        console.log({paso:1,count, producto})
-        addCount(count,producto[0])
+        addCount(count,producto);
     }
 
     return(
         <div>
-            <h1>Producto {producto[0].name}</h1>
-            <img src={producto[0].img}/>
+            <h1>Producto {producto.name}</h1>
+            <img src={producto.img}/>
             <ItemCount onChangeCount={(e)=>handlerAddCount(e)} />
         </div>
     )
