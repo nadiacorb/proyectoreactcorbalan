@@ -39,14 +39,6 @@ const ItemListContainer=({})=>{
     });
   }, []);
 
-  return (
-    <div>
-      {item && item.map((producto) => {
-          return <Item producto={producto} />;
-        })}
-    </div>
-  );
-};
 
  	return(
         <div className='productos__img'>
