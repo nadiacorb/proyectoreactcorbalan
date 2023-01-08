@@ -5,8 +5,11 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Image from './Cartwidget.png';
 import Style from './styles/Cartwidget.scss'
+=======
+>>>>>>> revision
 =======
 >>>>>>> revision
 

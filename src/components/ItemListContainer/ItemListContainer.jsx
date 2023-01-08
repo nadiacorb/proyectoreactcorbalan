@@ -40,6 +40,7 @@ const ItemListContainer=({})=>{
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div>
       {item && item.map((producto) => {
@@ -48,6 +49,8 @@ const ItemListContainer=({})=>{
     </div>
   );
 };
+=======
+>>>>>>> revision
 =======
 >>>>>>> revision
 

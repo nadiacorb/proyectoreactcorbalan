@@ -7,6 +7,7 @@ const ItemDetail =({producto})=>{
 const {addCount} = useContext(CartContext);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const handlerAddCount = (count) => {
     addCount(count,producto);
 };
@@ -18,6 +19,11 @@ return(
 </div>
 );
 };
+=======
+const handlerAddCount =(count)=>{
+        addCount(count,producto);
+    }
+>>>>>>> revision
 =======
 const handlerAddCount =(count)=>{
         addCount(count,producto);
