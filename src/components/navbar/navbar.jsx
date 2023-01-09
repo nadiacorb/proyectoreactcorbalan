@@ -2,10 +2,12 @@ import {Link} from 'react-router-dom';
 import React from 'react';
 import Cartwidget from '../Cartwidget/Cartwidget';
 import Style from './styles/Navbar.scss';
+import Image from './imagenacindar.png';
 
     const Navbar = ({menus, categorias}) =>{
     	return(
             <div>
+            <img src={Image} className='imagen__portada'/>
         <nav>
            {
             menus.map((menu)=>{

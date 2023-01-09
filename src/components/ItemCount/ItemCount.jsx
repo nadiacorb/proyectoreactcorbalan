@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Style from './styles/ItemCount.scss';
 
 const ItemCount =({onChangeCount})=>{
     const [value,setValue] = useState(0)
@@ -12,7 +13,7 @@ const ItemCount =({onChangeCount})=>{
         onChangeCount(value - 1)
     }
     return(
-        <div>
+        <div className='contador'>
             <h4>Agregar producto</h4>
             <button onClick={()=>handlerSubtractionCount()}>-</button>
             <input type="text" value={value} onChange={(e)=> setValue(e.target.value)}/>

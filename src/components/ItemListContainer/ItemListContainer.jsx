@@ -41,7 +41,7 @@ const ItemListContainer=({})=>{
 
 
  	return(
-        <div className='productos__img'>
+        <div className='catalogo__img'>
             {
             item && item.map((producto)=>{
                     return <Item producto={producto}/>

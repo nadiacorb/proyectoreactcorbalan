@@ -4,7 +4,7 @@ import {Productos,categorias} from '../mock';
 
 const Item =({producto})=>{
 	return{
-        <div className='productos__img'>
+        <div>
             {
             producto.map((producto)=>{
                     return

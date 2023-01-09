@@ -1,0 +1,27 @@
+.form-buyer {
+    display: flex;
+    flex-direction: row;
+    background-color: #E57949;
+    color: white;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.form-buyer label {
+    margin: 0px 10px 10px 40px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.product-card img {
+    width: 80px;
+}
+
+.product-card p {
+    color: black;
+}
