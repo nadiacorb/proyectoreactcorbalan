@@ -20,11 +20,13 @@ const ItemDetail =({producto})=>{
   return(
         <div>
             <h1>Producto {producto.name}</h1>
-            <div className='detalleproducto'>
+            <div className='detalleproducto__main'>
                 <img src={producto.img}/>
+                <div className='detalleproducto'>
                 <p>Precio: {producto.price}</p>
                 <p><ItemCount onAddToCart={handleAddToCart}/></p>
                 {cantidad>0&&<Link to='/cart'><button>Terminar Compra</button></Link>}
+                </div>
             </div>
             
         </div>

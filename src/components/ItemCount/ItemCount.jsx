@@ -19,11 +19,13 @@ const ItemCount =({stock=5,initial=1,onAddToCart})=>{
         <div className='contador'>
            <div>
             <h4>Agregar producto</h4>
+            <div className='style__button'>
             <button onClick={()=>handlerSubtractionCount()}>-</button>
             <p>{count}</p>
             <button onClick={()=>handlerAddCount()}>+</button>
             </div>
-            <div className='button__card'>
+               </div>
+            <div className='button__cart'>
             <button onClick= {() => {onAddToCart(count)}}>Agregar al carro</button>
             </div>
     </div>

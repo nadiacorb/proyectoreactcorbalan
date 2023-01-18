@@ -1,4 +1,4 @@
-.detalleproducto {
+.detalleproducto__main {
     display: flex;
     margin-top: 20px;
     justify-content: center;
@@ -7,4 +7,11 @@
 .detalleproducto img {
     width: 400px;
     margin-right: 80px;
+}
+
+.detalleproducto {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 40px;
 }

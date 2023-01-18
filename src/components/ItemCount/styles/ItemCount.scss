@@ -11,9 +11,19 @@
     width: 60px;
 }
 
-.button__card  button{
+.button__cart  button{
     margin-top: 20px;
     width: 120px;
      border-radius: 30px;
     align-content: center;
+}
+
+.style__button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.style__button p {
+    margin: 0px 15px;
 }
