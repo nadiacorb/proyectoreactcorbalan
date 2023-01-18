@@ -2,12 +2,13 @@ import { Productos } from "../../mock";
 import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 import Style from './styles/Cart.scss';
 
+
 const Cart = () => {
 
   const sendOrder = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection,order).then(({id})=> alert(id))
+    addDoc(ordersCollection,orders).then(({id})=> alert(id))
   };
 
   

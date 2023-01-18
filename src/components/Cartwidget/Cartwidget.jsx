@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 const Cartwidget = () => {
-    const {count} = useContext(CartContext)
+    const {getTotalItemCount} = useContext(CartContext)
     
 	return (
 		<div className='style__card'>
 		    <img src={Image}/>
-       <p>{count}</p>
+       <p>{getTotalItemCount}</p>
        <Link to="/cart" className='style__card--button'> Terminar compra</Link>
 		</div>
     

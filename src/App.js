@@ -7,6 +7,7 @@ import Navbar from  './components/navbar/Navbar';
 import Styles from './App.css'
 import { menus } from './mock';
 import Cart from './components/Cart/Cart';
+import CartProvider from "./context/CartContext";
 
 const App = () => {
     
@@ -27,6 +28,7 @@ const App = () => {
     
   return(
       <div>
+      <CartProvider>
       <BrowserRouter>
         <Navbar menus={menus} categorias={categorias}/>
           <Routes>
@@ -36,6 +38,7 @@ const App = () => {
       <Route exact path='/cart' element={<Cart />} />
           </Routes>
       </BrowserRouter>
+      </CartProvider>
       </div>
    
     )

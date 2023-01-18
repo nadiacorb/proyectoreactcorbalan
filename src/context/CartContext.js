@@ -1,35 +1,52 @@
-import {createContext, useReducer} from 'react'
-import { CartReducer} from './CartReducer'
+import React, {createContext, useState} from 'react'
 
-export const CartContext = createContext(null)
+export const CartContext = createContext()
 
-const initialState = {
-    count: 0,
-    producto:{},
-    listaProducto:[]
-}
-
-export const CartContextProvider =({children}) =>{
-    const [state,dispatch] = useReducer(CartReducer,initialState)
-
-    function addCount(count,producto){
-        dispatch({
-            type:"ADD_ITEMS",
-            payload:{count,producto}
-        })
+const CartProvider = ({children}) => {
+    
+    const [cart, setCart] = useState ([]);
+    
+    const isInCart = (id) => cart.find ((item) => item.id === id) ? true : false ;
+    
+    const addToCart = (item, count) => {
+        if (isInCart(item.id)) {
+            setCart(cart.map((producto)=>{
+                return producto.id === item.id ? {...producto, count: (producto.count + count)} : producto;
+            }))
+        } else {
+            setCart([...cart, {item, count}]);
+        }
     }
-
-
-    return(
-        <CartContext.Provider
-        value={{
-            count:state.count,
-            producto:state.producto,
-            listaProducto:state.listaProducto,
-            addCount,
-        }}
-        >
-            {children}
+    
+    const clearCart = () => {
+        setCart([]);
+    }
+    
+    const removeItem = (idToRemove) => {
+        let newCart = cart.filter(itemInCart => (itemInCart.id !== idToRemove));
+        setCart(newCart);
+    }
+    
+    const getTotalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.count * act.price, 0);
+    }
+    
+    const getTotalItemCount = () => {
+        let total = 0;
+        cart.forEach(itemInCart=> {
+            total = total + itemInCart.count;
+        })
+        return total;
+    }
+    
+    
+    return (
+        <>
+        <CartContext.Provider value={{ cart, addToCart, clearCart, removeItem, getTotalPrice, getTotalItemCount }}>
+        {children}
         </CartContext.Provider>
-    )
-}
+        </>
+        );
+};
+
+export default CartProvider;
