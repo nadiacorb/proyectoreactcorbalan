@@ -1,9 +1,13 @@
-import { Productos } from "../../mock";
 import { addDoc, collection, doc, getFirestore, updateDoc, writeBatch } from "firebase/firestore";
 import Style from './styles/Cart.scss';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext';
+
 
 
 const Cart = () => {
+    
+    const {cart} = useContext(CartContext);
 
   const sendOrder = () => {
     const db = getFirestore();
@@ -33,12 +37,12 @@ const Cart = () => {
           <input type="email" />
         </div>
       </div>
-      {Productos.map((producto) => {
+      {cart.map((producto) => {
         return (
           <div className="product-card">
             <img src={producto.img} />
             <p>{producto.name}</p>
-            <p>$ {producto.precio}</p>
+            <p>$ {producto.price}</p>
           </div>
         );
       })}

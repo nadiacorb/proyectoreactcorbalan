@@ -3,7 +3,7 @@ import { collection, getDocs, getFirestore, } from "firebase/firestore";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import Navbar from  './components/navbar/Navbar';
+import Navbar from  './components/NavbarPrincipal/NavbarPrincipal';
 import Styles from './App.css'
 import { menus } from './mock';
 import Cart from './components/Cart/Cart';

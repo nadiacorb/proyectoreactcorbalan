@@ -1,6 +1,5 @@
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from '../ItemDetail/ItemDetail';
-import {Productos} from '../../mock'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
@@ -13,17 +12,13 @@ useEffect(() => {
     const orderDoc = doc(db, "item", id);
     getDoc(orderDoc).then(result=>{
         if(result.exists()){
-            setProducto({...result.data()})
+            setProducto({id:result.id , ...result.data()})
         }
     })
-  }, []);  
+  }, [id]);  
    
 
-    useEffect(() =>{
-        const product = Productos.filter((p)=> p.id == id);
-        setProducto(product);
-    },[id])
-   return producto ? <ItemDetail producto={producto} /> : <h1>cargando</h1>;
+    return producto ? <ItemDetail producto={producto} /> : <h1>cargando</h1>
     
 }
 

@@ -11,7 +11,7 @@ const Cartwidget = () => {
 	return (
 		<div className='style__card'>
 		    <img src={Image}/>
-       <p>{getTotalItemCount}</p>
+       <p>{getTotalItemCount()}</p>
        <Link to="/cart" className='style__card--button'> Terminar compra</Link>
 		</div>
     
